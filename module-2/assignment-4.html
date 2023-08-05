@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<body style="padding:40px 80px; font-size: 22px;">
+
+  <script>
+  // 4) Ajax
+    async function fetchData(URL){
+      let urlResponse = await fetch(URL);
+      let processedData = await urlResponse.json();
+      document.write(JSON.stringify(processedData))
+    }
+
+    let URL = "https://jsonplaceholder.typicode.com/posts";
+    fetchData(URL);
+  </script>
+</body>
+</html>

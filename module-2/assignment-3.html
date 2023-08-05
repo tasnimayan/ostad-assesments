@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<body style="padding:40px 80px; font-size: 22px;">
+
+  <div>
+    <img id="changeSrc" src="image1.jpg" alt="" width="400" >
+  </div>
+<button id="firstImage">Image 1</button>
+<button id="secondImage">Image 2</button>
+
+  <script>
+    // 3) Image Switcher
+    let btnOne = document.getElementById("firstImage");
+    let btnTwo = document.getElementById("secondImage");
+
+    btnOne.addEventListener('click', ()=>{
+      let image = document.getElementById("changeSrc");
+       image.src = "image1.jpg"
+    });
+
+    btnTwo.addEventListener('click', ()=>{
+      let image = document.getElementById("changeSrc");
+       image.src = "image2.jpeg"
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<body style="padding:40px 80px; font-size: 22px;">
+
+  <span>Click Count :</span>
+  <p id="showCount">0</p>
+  
+  <button id="btnIncrement">Increment</button>
+
+  <script>
+  // 2) Click Counter
+    let btn = document.getElementById("btnIncrement");
+    let count = 0;
+
+    btn.addEventListener("click", ()=>{
+      const showTo = document.getElementById("showCount");
+      count++;
+      showTo.innerHTML = count;
+
+    })
+  </script>
+</body>
+</html>

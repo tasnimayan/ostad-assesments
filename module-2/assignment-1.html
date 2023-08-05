@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<body>
+  <div class="content-container">
+    <h2>The initial div is empty. Press the button to add content</h2>  
+  </div>
+  
+  <button id="btnChangeContent">Click Me</button>
+
+  <script>
+// 1) DOM Manipulation
+let btn = document.getElementById("btnChangeContent");
+
+btn.addEventListener("click", ()=>{
+  let divContainer = document.querySelector(".content-container");
+
+  let img = document.createElement('img');
+  img.src = "cat-image.jpg";
+  img.width = "200";
+  divContainer.appendChild(img);
+
+  let detail = document.createElement('p');
+  detail.appendChild(document.createTextNode("This is a demo image"));
+  divContainer.appendChild(detail)
+});
+  </script>
+</body>
+</html>
