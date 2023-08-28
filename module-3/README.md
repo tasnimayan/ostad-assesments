@@ -1,12 +1,12 @@
 Task Description is as below
 
-1) javascript For in loop
+1. javascript For in loop
 
 Write a JavaScript function named printObjectProperties that takes an object as an argument and uses the for...in loop to print all the properties and their values in the following format: "property: value". If the object is empty, print "Object is empty".
 
 
 
-2) javascript function returns
+2. javascript function returns
 
 Write a JavaScript function named findMaxNumber that takes an array of numbers as an argument and returns the maximum number in the array. If the array is empty, the function should return null.
 
@@ -22,7 +22,7 @@ const emptyArray = [];
 console.log(findMaxNumber(emptyArray)); // Output: null
 
 
-3) javascript Spread Operator
+3. javascript Spread Operator
 
 Write a JavaScript function named mergeArrays that takes two arrays as arguments and returns a new array that merges both arrays using the spread operator.
 
@@ -32,7 +32,7 @@ const arr2 = [4, 5, 6];
 console.log(mergeArrays(arr1, arr2)); // Output: [1, 2, 3, 4, 5, 6]
 
 
-4) javascript arrow function
+4. javascript arrow function
 
 Write a JavaScript arrow function named calculateSquare that takes a number as an argument and returns the square of that number.
 
@@ -41,7 +41,7 @@ console.log(calculateSquare(5)); // Output: 25
 console.log(calculateSquare(8)); // Output: 64
 
 
-5) javascript es6 map
+5. javascript es6 map
 
 Write a JavaScript function named doubleNumbers that takes an array of numbers as an argument and uses the ES6 map method to return a new array where each number is doubled.
 
@@ -50,7 +50,7 @@ const numbers = [1, 2, 3, 4, 5];
 console.log(doubleNumbers(numbers)); // Output: [2, 4, 6, 8, 10]
 
 
-6) javascript es6 static keyword
+6. javascript es6 static keyword
 
 Create a JavaScript class named MathUtility with an ES6 static method called multiply. The multiply method should take two parameters and return their product.
 
@@ -59,7 +59,7 @@ console.log(MathUtility.multiply(5, 3)); // Output: 15
 console.log(MathUtility.multiply(2, 8)); // Output: 16
 
 
-7) javascript es6 class inheritance
+7. javascript es6 class inheritance
 
 Create a JavaScript class named Animal with a constructor that takes two parameters: name and sound. The class should have a method named makeSound that logs the sound of the animal.
 
@@ -75,7 +75,7 @@ dog.fetch(); // Output: "Fetching the ball!"
 
 
 
-8) javascript es6 super keyword
+8. javascript es6 super keyword
 
 Create a JavaScript class named Person with a constructor that takes two parameters: name and age. The class should have a method named introduce that logs a greeting message including the person's name and age.
 
