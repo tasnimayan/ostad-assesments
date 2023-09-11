@@ -13,15 +13,6 @@ const multer = require('multer')
 // Creating express application
 const app = express()
 
-// Defining the middlwares
-app.use("/" , router);
-// Response for undefined routing
-app.use('*', (req, res)=>{
-  res.status(404)
-  res.end(JSON.stringify({title:"Not found", message:"The page you are searching could not be found!"}))
-})
-
-
 app.use(express.json())
 app.use(cors())
 app.use(helmet())
@@ -29,5 +20,13 @@ app.use(mongoSanitize())
 app.use(hpp())
 app.use(rateLimit())
 
+
+// Defining the middlwares
+app.use("/" , router);
+// Response for undefined routing
+app.use('*', (req, res)=>{
+  res.status(404)
+  res.end(JSON.stringify({title:"Not found", message:"The page you are searching could not be found!"}))
+})
 
 module.exports = app;
