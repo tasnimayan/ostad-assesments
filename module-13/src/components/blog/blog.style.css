@@ -1,0 +1,30 @@
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.blog-wrapper {
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+  margin: 40px 100px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+.blog-wrapper img {
+  box-sizing: border-box;
+  width: 500px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.blog-desc {
+  text-align: left;
+}
+
+.see-more {
+  border: 2px solid #dddddd;
+  display: block;
+  width: 120px;
+  padding: 20px;
+  float: right;
+}

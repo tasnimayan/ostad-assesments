@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 
 const StudentsModel = mongoose.Schema(
   {
-    email: {type:String},
+    email: {type:String, unique:true},
     firstName:{type:String},
     lastName:{type:String},
     mobile:{type:String},

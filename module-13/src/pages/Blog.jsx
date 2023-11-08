@@ -29,11 +29,11 @@ const Blog = () => {
   const [cardData, setCardData] = useState(blogPosts)
 
   return (
-    <div>
+    <section style={{padding:"0 12.5em"}}>
 
       {cardData.map((item, idx)=>(<BlogPost postObj = {item} key={idx}/>))}
 
-    </div>
+    </section>
   );
 };
 

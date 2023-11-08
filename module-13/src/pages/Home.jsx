@@ -1,5 +1,6 @@
 // import { useState } from "react";
-import Hero from "../components/hero/Hero";
+import AboutMe from "../components/home/AboutMe";
+import Hero from "../components/home/Hero";
 
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
+      <AboutMe />
     </div>
   );
 };
