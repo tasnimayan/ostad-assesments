@@ -1,0 +1,28 @@
+.about-location {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12em;
+}
+
+.location-info {
+  box-sizing: border-box;
+  text-align: left;
+  flex: 1;
+}
+.location-info h4 {
+  font-size: 3.5em;
+  line-height: 1;
+  margin: 0;
+}
+.location-info p {
+  font-size: 1.5em;
+  padding: 10px 0;
+  line-height: 1.5;
+}
+.map-image {
+  flex: 1;
+}
+.about-location .map-image img {
+  width: 400px;
+  filter: contrast(1.1);
+}

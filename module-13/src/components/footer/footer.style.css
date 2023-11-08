@@ -1,0 +1,60 @@
+.footer-container {
+  background-color: #fff;
+  padding: 70px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color-light);
+}
+.footer-container .footer-logo {
+  display: block;
+  width: 60px;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--color-accent);
+  cursor: default;
+}
+
+.footer-slogan h1 {
+  width: 70%;
+  margin: 20px auto;
+  font-size: 24px;
+  font-family: "Gill Sans", "Gill Sans MT";
+  text-align: center;
+}
+
+.icon-container {
+  margin: 20px 0 20px 0;
+}
+
+.icon-container > a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  display: flex row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  margin: 12px;
+  border: 2px solid var(--icon-color-light);
+  border-radius: 50%;
+  transition: all 0.2s ease-out;
+}
+
+.icon-container a .icon {
+  font-size: 20px;
+  color: var(--icon-color-light);
+}
+
+.icon-container a:hover {
+  border: 2px solid var(--color-accent);
+  transition: all 0.2s ease-in;
+}
+
+.icon-container a:hover .icon {
+  color: var(--color-accent);
+  transition: all 0.2s ease-in;
+}

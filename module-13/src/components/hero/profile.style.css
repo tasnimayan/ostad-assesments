@@ -1,0 +1,54 @@
+/*=============== Profile image styles ============= */
+
+.profile-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background: transparent;
+  margin-top: -100px;
+  padding: 0 250px;
+}
+.profile-wrapper > .profile-border {
+  height: 190px;
+  width: 190px;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0))
+      padding-box,
+    linear-gradient(to bottom, rgb(88, 88, 253), rgb(128, 40, 128)) border-box;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img {
+  border: 2px solid rgb(128, 40, 128);
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.social > button {
+  height: 40px;
+  background-color: transparent;
+  color: #000000;
+  background-color: rgb(255, 255, 255);
+  margin-right: 20px;
+  border: 1px solid;
+}
+
+/* ==============  Profile About Design ================ */
+.hero-section {
+  /* background-color: var(--bgcolor-light); */
+  padding: 20px 250px;
+  align-items: center;
+}
+.hero-left {
+  flex: 1;
+  text-align: left;
+}
+.hero-left > h1 {
+  font-size: 48px;
+  line-height: 0;
+}
