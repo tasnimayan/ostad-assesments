@@ -1,0 +1,25 @@
+.work-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+
+.work-card > .shadow-hover:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.work-card .btn {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+}
+
+.work-card:hover .btn {
+  background-color: var(--color-accent-secondary);
+  color: #fff;
+}

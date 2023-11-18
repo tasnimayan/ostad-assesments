@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Followers",
+    "count": 240452,
+    "icon": "faUsers"
+  },
+  {
+    "title": "Solved Problems",
+    "count": 6300,
+    "icon": "faThumbsUp"
+  },
+  {
+    "title": "Happy Customers",
+    "count": 25000,
+    "icon": "faFaceSmile"
+  },
+  {
+    "title": "Projects",
+    "count": 360452,
+    "icon": "faQrcode"
+  }
+]

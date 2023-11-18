@@ -1,0 +1,31 @@
+.stat-section .stat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.icon.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-primary);
+  color: #6b6b6b;
+  width: 6rem;
+  height: 6rem;
+  font-size: 1.8rem;
+  border-radius: 15px;
+}
+.counts {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 1rem 0 0 0;
+}
+
+.count-title {
+  font-size: 16px;
+  font-weight: 700;
+}

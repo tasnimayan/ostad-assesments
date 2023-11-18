@@ -1,0 +1,15 @@
+.featured-section .row {
+  font-family: "Poppins";
+  color: #2e3e5c;
+}
+.featured-section .card-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.featured-section .card-date {
+  font-size: 14px;
+  padding: 10px 0;
+  margin: 0;
+  line-height: normal;
+}
