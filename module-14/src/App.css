@@ -2,6 +2,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow: none;
 }
 
 section,
@@ -9,6 +10,19 @@ header {
   padding: 60px 40px 60px 100px;
 }
 
+@media only screen and (max-width: 576px) {
+  section,
+  header {
+    padding: 40px 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section,
+  header {
+    padding: 60px 60px;
+  }
+}
 /* ====== Global styling ===== */
 .d-flex-center {
   display: flex;

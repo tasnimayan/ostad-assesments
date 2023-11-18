@@ -1,8 +1,9 @@
+import ServiceList from "../components/services/ServiceList";
 
 const Service = () => {
   return (
     <div>
-      This is service
+      <ServiceList />
     </div>
   );
 };
