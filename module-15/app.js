@@ -18,10 +18,6 @@ const studentRouter = require('./src/routes/api')
 
 
 //    =========    MIDDLEWARE     ========
-
-console.log(path.join(__dirname, './public'));
-app.use(express.static(path.join(__dirname, './public')));
-
 const limiter = rateLimit({
 	windowMs: 30 * 60_000,
 	max: 5000,
@@ -48,7 +44,15 @@ mongoose.connection.on('disconnected', () => {
 	console.log("======= Database Disconnected ======");
 });
 
-app.use('/api/users', studentRouter);
+
+// Frontend connecting
+app.use(express.static('client/dist'))
+app.get("*", function(req, res){
+	res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
+})
+
+//Backend Routing
+app.use('/api/students', studentRouter);
 
 
 app.all('*', (req, res, next) => {

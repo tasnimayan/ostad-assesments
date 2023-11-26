@@ -1,20 +1,16 @@
 import { useState } from "react";
 import TableRow from "../Components/TableRow";
+import { getStudents } from "../APIServices/StudentCRUD";
 
 
 const StudentList = () => {
+  getStudents().then((data)=>{
+    if(data){
+      console.log(data)
+    }
+  })
+  
   const [studentData, setStudentData] = useState([{
-    name:"Ayan",
-    gender:"Male",
-    dob:"1998-10-24",
-    nationality:"Bangladeshi",
-    address:"Dhaka, Bangladesh",
-    email:"ayan@gmail.com",
-    phone:"01645800408",
-    admissionDate:"2023-11-26",
-    courses:"Computer"
-  },
-  {
     name:"Ayan",
     gender:"Male",
     dob:"1998-10-24",
@@ -27,7 +23,7 @@ const StudentList = () => {
   }]);
   return (
     <section className="px-5 text-center">
-      <h3>Student Details</h3>
+      <h3 className="pb-5">Student Details</h3>
 
       <div className="table-responsive w-100 d-block ">
         <table className="table table-striped text-start">

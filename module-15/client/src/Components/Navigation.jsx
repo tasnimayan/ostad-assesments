@@ -5,15 +5,18 @@ import StudentRegistration from "../Pages/StudentRegistration";
 
 const Navigation = () => {
   return (
-    <nav className="">
-      <ul className="nav justify-content-center">
-        <li className="nav-item">
-          <a className="nav-link active" href="/">Students</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/registration">Register</a>
-        </li>
-      </ul>
+    <nav>
+      <div className="py-2 bg-body-tertiary fs-5">
+        <ul className="nav justify-content-end">
+          <li className="nav-item">
+            <a className="nav-link active" href="/">Students</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/registration">Register</a>
+          </li>
+        </ul>
+      </div>
+      
 
       <Routes >
         <Route path="/" element={<StudentList/>} />
