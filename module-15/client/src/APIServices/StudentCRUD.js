@@ -58,13 +58,13 @@ export function Delete(id){
 
 // Get All students data
 export function getStudents(){
-  let url = "api/students"
+  let URL = "/api/students/"
 
-  return axios.get(url)
+  return axios.get(URL)
   .then((res)=>{
     if(res.status === 200){
-      console.log(res.data)
-      return res.data;
+      console.log(res)
+      return res;
     }
     else{
       return false;

@@ -1,79 +1,94 @@
 
 import { useState } from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
+import { Create } from '../APIServices/StudentCRUD';
 
 const StudentRegistration = () => {
 
 
 
-// // const FillFrom = async (id) => {
-// //   let res = await studentDataById(id)
+// const FillFrom = async (id) => {
+//   let res = await studentDataById(id)
 
-// //   setFromData({
-// //       firstName: res.firstName,
-// //       lastName: res.lastName,
-// //       gender: res.gender,
-// //       dateOfBirth: res.dateOfBirth,
-// //       nationality: res.nationality,
-// //       address: res.address,
-// //       email: res.email,
-// //       phone: res.phone,
-// //       admissionDate: res.admissionDate,
-// //       courses: res.courses,
-// //   })
-// // }
+//   setFromData({
+//       firstName: res.firstName,
+//       lastName: res.lastName,
+//       gender: res.gender,
+//       dateOfBirth: res.dateOfBirth,
+//       nationality: res.nationality,
+//       address: res.address,
+//       email: res.email,
+//       phone: res.phone,
+//       admissionDate: res.admissionDate,
+//       courses: res.courses,
+//   })
+// }
 
 
 
-// // const Save = async () => {
-// //   if (UpdateId === null) {
-// //       let res = await createStudentData(FormData);
-// //       if (res) {
-// //           toast.success("Student Data Created")
-// //           navigate("/")
-// //       }
-// //       else {
-// //           toast.error("Request Fail")
-// //       }
-// //   } else {
+// const Save = async () => {
+//   if (UpdateId === null) {
+//       let res = await createStudentData(FormData);
+//       if (res) {
+//           toast.success("Student Data Created")
+//           navigate("/")
+//       }
+//       else {
+//           toast.error("Request Fail")
+//       }
+//   } else {
 
-// //       let res = await updateStudentData(FormValue, UpdateId);
-// //       if (res) {
-// //           toast.success("Student Data  Update")
-// //           navigate("/")
-// //       }
-// //       else {
-// //           toast.error(" Update Request Fail")
-// //       }
-// //   }
+//       let res = await updateStudentData(FormValue, UpdateId);
+//       if (res) {
+//           toast.success("Student Data  Update")
+//           navigate("/")
+//       }
+//       else {
+//           toast.error(" Update Request Fail")
+//       }
+//   }
 
-// // };
+// };
 
 
   // Store the form data
+  
+  const dateOfBirth = new Date("1998-10-24");
+  const admission = new Date();
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    gender: '',
-    dateOfBirth: '',
-    nationality: '',
-    address: '',
-    email: '',
-    phone: '',
-    admissionDate: '',
-    courses: '',
+    firstName:"",
+    lastName:"",
+    gender:"",
+    dob:dateOfBirth,
+    nationality:"",
+    address:"",
+    email:"",
+    phone:"",
+    admissionDate:admission,
+    courses:""
   });
 
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
+
     setFormData({ ...formData, [name]: value });
+    console.log(formData)
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    let dob = new Date(formData.dateOfBirth)
+    let admDate = new Date(formData.admissionDate)
+
+    setFormData({...formData, dob:dob, admissionDate:admDate})
     
-    console.log(formData);
+    Create(formData).then((result)=>{
+      if(result)
+        console.log("Passed")
+      else
+        console.log("Failed")
+    })
   };  
 
   return (
@@ -186,7 +201,6 @@ const StudentRegistration = () => {
           </Form.Group>
 
           <Row>
-            {/* Other fields like nationality, phone, admissionDate */}
           </Row>
           <Form.Group controlId="courses">
             <Form.Label>Courses</Form.Label>

@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TableRow from "../Components/TableRow";
 import { getStudents } from "../APIServices/StudentCRUD";
 
 
 const StudentList = () => {
-  getStudents().then((data)=>{
-    if(data){
-      console.log(data)
-    }
-  })
+
+    getStudents().then((data)=>{
+      if(data){
+        console.log(data)
+      }
+    }).catch(err=>console.log(err))
+  
   
   const [studentData, setStudentData] = useState([{
     name:"Ayan",

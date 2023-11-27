@@ -10,9 +10,7 @@ exports.registerStudent = async (req, res)=> {
     if (!student) {
       return res.status(400).send();
     }
-    res
-      .status(201)
-      .send({ message: 'Student data inserted successfully!'});
+    res.status(201).send({ message: 'Student data inserted successfully!'});
   }
   catch (err) {
     res.status(400).send({ error: err.message });
@@ -61,10 +59,11 @@ exports.getStudentData = async (req, res)=> {
     const allStudents = await Student.find();
 
     if (allStudents.length === 0) {
-      return res.status(200).send({ message: 'No students found' });
+      return res.status(404).send({ message: 'No students found' });
     }
-    res.status(200).send(allStudents);
-  } catch (err) {
-    res.status(400).send(err.message);
+    res.status(200).send({message:"Successful", data:allStudents});
+  }
+  catch (err) {
+    res.status(400).send({message:err.message});
   }
 }
